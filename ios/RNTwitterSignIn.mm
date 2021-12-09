@@ -41,10 +41,7 @@ RCT_EXPORT_METHOD(logIn: (RCTPromiseResolveBlock)resolve
                                        @"userID":session.userID,
                                        @"email": requestedEmail,
                                        @"userName":session.userName};
-                if(authNotResolved){
-                    resolve(body);
-                    authNotResolved = false;
-                }
+               resolve(body);
             }];
         } else {
             reject(@"Error", @"Twitter signin error", error);
